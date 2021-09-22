@@ -1,0 +1,45 @@
+@use 'colors';
+$button-length:6rem;
+$text-color:white;
+.button-icon{
+    margin-right: 0.3rem;
+}
+.buttons{
+    padding: 0.5rem;
+}
+.transparent-button{
+    margin-left: 0.5rem;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    padding-top: 0.3rem ;
+    padding-bottom: 0.3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    text-decoration: none;
+}
+.transparent-button:hover{
+    background-color: white;
+    color: black;
+}
+.youtube-button{
+    margin-left: 1rem;
+    color: $text-color;
+    width: $button-length;
+    background-color: colors.$youtube-red;
+    border: none;
+}
+.youtube-button:hover{
+    background-color: colors.$youtube-red-lighter;
+}
+.spotify-button{
+    margin-left: 1rem;
+     color: $text-color;
+     width: $button-length;
+     background-color: colors.$spoitify-green;
+     border: none;
+     border-radius: 1rem;
+}
+.spotify-button:hover{
+    background-color: colors.$spoitify-green-lighter;
+}

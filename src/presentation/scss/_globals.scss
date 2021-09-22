@@ -1,0 +1,76 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+   // background-color: black;
+  //  overflow-y: hidden;
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+#background-video{
+  //  position: fixed; /* optional depending on what you want to do in your app */
+ //   object-fit: cover;
+  //  top: 50%;
+ //   left: 50%;
+ //   height: 100vh;
+//    min-width: 100%;
+ //   z-index: -100;
+ //   transition: "opacity, 2s ease-in-out";
+//    -webkit-transform: translateX(-50%) translateY(-50%);
+//    transform: translateX(-50%) translateY(-50%);
+//    -webkit-background-size: cover;
+//    -moz-background-size: cover;
+ //   -o-background-size: cover;
+//     background-size: cover;
+    position:fixed;
+    object-fit: cover;
+    top:20;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -100;
+}
+
+.content{
+    position: fixed;
+    width: 100vw;
+}
+.center{
+    justify-content: center;
+}
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #background-video {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #background-video { 
+        width:auto;
+        height: 100%;
+    }
+}

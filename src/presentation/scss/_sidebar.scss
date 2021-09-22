@@ -1,0 +1,36 @@
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    height: 90vh; 
+    
+    ul{
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+       
+        list-style: none;
+        margin: 0;
+  	    padding: 0;
+  	    width: 25%;
+          height: 100vh; 
+    }
+    .nav-link{
+        display: block;
+        font-size: 1.5rem;
+        //font-size: rem;
+        padding: 8px 16px;
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+      //  transform: rotate(90deg);
+    }
+    .nav-link:hover{
+        color: rgb(235, 128, 29);
+    }
+}
+.side-way-link{
+    transform: rotate(-90deg);
+}
