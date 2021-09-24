@@ -10,7 +10,7 @@ const Socials = () => {
     const instagramLink="https://www.instagram.com/3ltan/";
     const spotifyLink="https://open.spotify.com/artist/6xybSqEXa6jKTgknzvmxhM";
     const appleLink="https://music.apple.com/artist/el-tan/1440661116";
-    const audioMacLink="https://audiomack.com/el-tan-1";
+    const deezerLink="https://www.deezer.com/en/artist/53423832?autoplay=true";
     return ( 
         <div className={"side-bar"}>
             <ul>
@@ -73,7 +73,7 @@ const Socials = () => {
                     <button href="#" className={"nav-link"}
                             onClick={
                                 ()=>{
-                                    openLink(audioMacLink)
+                                    openLink(deezerLink)
                                 }
                             }
                     >

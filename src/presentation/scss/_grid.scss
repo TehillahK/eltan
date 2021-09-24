@@ -6,3 +6,11 @@
 .grid{
     display: grid;
 }
+
+.two-rols{
+    grid-template-rows: 8rem 30rem;
+}
+
+.main{
+    grid-template-columns: 38rem;
+}

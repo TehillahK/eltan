@@ -43,3 +43,17 @@ $text-color:white;
 .spotify-button:hover{
     background-color: colors.$spoitify-green-lighter;
 }
+
+.download-music{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    text-decoration: none;
+    border-style: solid;
+    padding: 0.5rem;
+}
+
+.download-music:hover{
+    border-color:rgb(235, 128, 29); 
+    color: rgb(235, 128, 29);
+}

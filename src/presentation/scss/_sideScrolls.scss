@@ -1,0 +1,12 @@
+.scroll-wrapper{
+    display: inline-flex;
+   width: 20rem;
+   // grid-template-columns: auto;
+  //  grid-template-rows: auto;
+    overflow-x: auto;
+}
+
+.scroll-wrapper::-webkit-scrollbar{
+    display:none;
+}
+

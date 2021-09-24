@@ -7,9 +7,15 @@ import Footer from "./components/Footer";
 import background from "./assets/background.mp4";
 function App() {
   const[musicPressed,setMusicPressed]=useState(false);
-
+  const [reset,setReset]=useState(false);
   const showMusic =()=>{
     setMusicPressed(!musicPressed)
+  }
+  const resetAll=()=>{
+    setReset(!reset)
+    if(reset){
+      setMusicPressed(false);
+    }
   }
   return (
     <div>
@@ -20,7 +26,7 @@ function App() {
       <div className="content">
         <div className={"container"}>
           <NavLinks showMusic={showMusic} />
-          <Main showMusic={musicPressed} />
+          <Main reset={resetAll}  showMusic={musicPressed} />
           <Socials />
         </div>
         <Footer />
