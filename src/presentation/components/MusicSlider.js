@@ -31,10 +31,11 @@ function MusicAlbums(props){
     return(
         <OwlCarousel
         className="owl-theme"
-        loop={true}
+        loop={false}
         margin={0}
         items={1}
-     //   options={options} 
+        center={true}
+       // options={options} 
         nav> 
             <div class="item">
                 <MusicAlbum />
