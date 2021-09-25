@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15"
   }
 }
