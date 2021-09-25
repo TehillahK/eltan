@@ -1,0 +1,278 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+#background-video {
+  position: fixed;
+  object-fit: cover;
+  top: 20;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -100;
+}
+
+.content {
+  position: fixed;
+  width: 100vw;
+}
+
+.center {
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #background-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #background-video {
+    width: auto;
+    height: 100%;
+  }
+}
+header {
+  padding-top: 15px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5rem auto 3rem;
+  grid-template-rows: 700px;
+}
+
+.grid {
+  display: grid;
+}
+
+.two-rols {
+  grid-template-rows: 8rem 30rem;
+}
+
+.main {
+  grid-template-columns: 15rem;
+}
+
+.auto-cols {
+  grid-template-columns: auto 10px auto;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer {
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    grid-template-rows: 550px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-rows: 550px;
+  }
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  height: 100vh;
+}
+.side-bar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  height: 100vh;
+  margin-right: 2rem;
+}
+.side-bar .nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.side-bar .nav-link:hover {
+  color: #eb801d;
+}
+
+.side-way-link {
+  transform: rotate(-90deg);
+}
+
+.title {
+  background-color: transparent;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title:hover {
+  color: #eb801d;
+}
+
+.copyright-line {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.album-cover {
+  object-fit: cover;
+  width: 40px;
+}
+
+.music-card {
+  display: grid;
+  grid-template-columns: 200px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.music-card button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-box {
+  color: white;
+  outline: none;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 8rem;
+}
+
+.button-icon {
+  margin-right: 0.3rem;
+}
+
+.buttons {
+  padding: 0.5rem;
+}
+
+.transparent-button {
+  margin-left: 0.5rem;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  text-decoration: none;
+}
+
+.transparent-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.youtube-button {
+  margin-left: 1rem;
+  color: white;
+  width: 80px;
+  background-color: #FF0000;
+  border: none;
+}
+
+.youtube-button:hover {
+  background-color: #ff02029a;
+}
+
+.spotify-button {
+  margin-left: 1rem;
+  color: white;
+  width: 80px;
+  background-color: #1DB954;
+  border: none;
+  border-radius: 1rem;
+}
+
+.spotify-button:hover {
+  background-color: #21dd63;
+}
+
+.download-music {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  text-decoration: none;
+  border-style: solid;
+  padding: 0.5rem;
+}
+
+.download-music:hover {
+  border-color: #eb801d;
+  color: #eb801d;
+}
+
+.scroll-wrapper {
+  display: inline-flex;
+  width: 20rem;
+  overflow-x: auto;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

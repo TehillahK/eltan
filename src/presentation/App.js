@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./scss/main.scss";
+import "./dist/css/main.css";
 import Header from "./components/Header"
 import Main from "./components/Main";
 import NavLinks from "./components/NavLinks";
