@@ -6,6 +6,7 @@ import NavLinks from "./components/NavLinks";
 import Socials from "./components/Socials";
 import Footer from "./components/Footer";
 import background from "./assets/background.mp4";
+import BackgroundAlt from "./assets/background.webm"
 function App() {
   const[musicPressed,setMusicPressed]=useState(false);
   const [reset,setReset]=useState(false);
@@ -20,8 +21,9 @@ function App() {
   }
   return (
     <div>
-      <video preload="metadata"  autoPlay  muted loop id="background-video" playsInline>
+      <video preload="metadata" playsInline  autoPlay  muted loop id="background-video" >
         <source src={background} type="video/mp4" />
+        <source src={BackgroundAlt} type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div className="content">
