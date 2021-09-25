@@ -12,7 +12,6 @@ function Header(props){
                         }
                     }
                 >EL-TAN</button>
-                <p style={{marginLeft:"auto",marginRight:"auto"}}>EL-Tan is a Zambian-born artist who started rapping at age 3.</p>
         </div>
     )
 }
@@ -21,7 +20,7 @@ const Main = (props) => {
     const reset=props.reset;
     return (
         <main className={"grid two-rols main center"}>
-            <Header reset={reset} />
+            <Header />
             <div>
                 {
                    showMusic && (

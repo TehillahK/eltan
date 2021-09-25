@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify , faYoutube} from '@fortawesome/free-brands-svg-icons'
-
+import Logo from '../assets/logo.png'
 function Buttons(){
     return(
         <div className={"flex flex-row space-between buttons"}>
@@ -10,18 +10,15 @@ function Buttons(){
                 <FontAwesomeIcon className="button-icon" icon={faYoutube} />
                 youtube
             </button>
-            <button className={"spotify-button"}>
-                <FontAwesomeIcon className="button-icon" icon={faSpotify} />
-                follow
-            </button>
         </div>
     )
 }
 const Footer = () => {
     return ( 
-        <footer className={"grid center"}>
-           <div className={"flex flex-column center"}>
-                <Buttons />
+        <footer className={"grid auto-cols center "}>
+           
+           <div className={"flex flex-column center footer"}>
+                <Buttons /> 
                 <p className={"copyright-line"}>&#169; 2021 Rich Avenue All Rights Reserved</p>
            </div>
         </footer>

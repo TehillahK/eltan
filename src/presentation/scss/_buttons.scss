@@ -1,5 +1,5 @@
 @use 'colors';
-$button-length:6rem;
+$button-length:80px;
 $text-color:white;
 .button-icon{
     margin-right: 0.3rem;
@@ -12,6 +12,8 @@ $text-color:white;
     background-color: transparent;
     color: white;
     border-color: white;
+    border-style: solid;
+    
     padding-top: 0.3rem ;
     padding-bottom: 0.3rem;
     padding-left: 0.3rem;

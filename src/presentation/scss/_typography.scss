@@ -1,11 +1,12 @@
 .title{
     background-color: transparent;
     color: white;
-    margin-top: 2rem;
-    letter-spacing: 2rem;
+   // margin-top: 2rem;
+    letter-spacing: 2px;
     font-size: 3rem;
     border: none;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title:hover{
@@ -16,6 +17,7 @@
     font-size: 0.7rem;
     margin-left: auto;
     margin-right: auto;
+    max-width: fit-content;
 }
 
 .text-center{

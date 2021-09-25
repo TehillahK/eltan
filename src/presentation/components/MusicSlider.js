@@ -32,7 +32,7 @@ function MusicAlbums(props){
         <OwlCarousel
         className="owl-theme"
         loop={false}
-        margin={0}
+        margin={50}
         items={1}
         center={true}
        // options={options} 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./scss/main.scss";
+import Header from "./components/Header"
 import Main from "./components/Main";
 import NavLinks from "./components/NavLinks";
 import Socials from "./components/Socials";
@@ -24,6 +25,7 @@ function App() {
         Your browser does not support the video tag.
       </video>
       <div className="content">
+       
         <div className={"container"}>
           <NavLinks showMusic={showMusic} />
           <Main reset={resetAll}  showMusic={musicPressed} />
