@@ -17,7 +17,7 @@ body {
 
 #background-video {
   position: fixed;
-  object-fit: cover;
+  object-fit: fill;
   top: 20;
   min-width: 100vw;
   min-height: 100vh;
