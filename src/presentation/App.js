@@ -20,7 +20,7 @@ function App() {
   }
   return (
     <div>
-      <video preload="yes" autoPlay  muted loop id="background-video " webkit-playsinline>
+      <video preload="yes"  autoPlay  muted loop id="background-video" playsInline>
         <source src={background} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

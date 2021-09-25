@@ -17,10 +17,12 @@ body {
 
 #background-video {
   position: fixed;
-  object-fit: fill;
+  object-fit: contain;
   top: 20;
   min-width: 100vw;
   min-height: 100vh;
+  width: auto;
+  height: auto;
   z-index: -100;
 }
 

@@ -32,10 +32,14 @@ body {
  //   -o-background-size: cover;
 //     background-size: cover;
     position:fixed;
-    object-fit: fill;
+    object-fit: contain;
+   // transform: translate(-50%,-50%);
     top:20;
     min-width: 100vw;
     min-height: 100vh;
+   // max-width: 120vw;
+    width: auto;
+    height: auto;
     z-index: -100;
 }
 
