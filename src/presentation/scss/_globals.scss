@@ -32,17 +32,26 @@ body {
  //   -o-background-size: cover;
 //     background-size: cover;
     position:fixed;
-    object-fit: contain;
+  //  object-fit: cover;
    // transform: translate(-50%,-50%);
     top:20;
     min-width: 100vw;
     min-height: 100vh;
+    transition: "opacity, 2s ease-in-out";
+    
    // max-width: 120vw;
-    width: auto;
-    height: auto;
-    z-index: -100;
+   // width: auto;
+   // height: auto;
+   // z-index: -1000;
 }
-
+#background-video>video{
+    display: block;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
 .content{
     position: fixed;
     width: 100vw;
@@ -69,12 +78,12 @@ body {
 @media (min-aspect-ratio: 16/9) {
     #background-video {
         width:100%;
-        height: auto;
+      
     }
 }
 @media (max-aspect-ratio: 16/9) {
     #background-video { 
-        width:auto;
-        height: 100%;
+      
+       height: 100%;
     }
 }
