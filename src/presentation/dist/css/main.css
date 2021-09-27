@@ -180,6 +180,14 @@ footer {
   text-align: center;
 }
 
+.bio {
+  padding-top: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 1px;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
 .album-cover {
   object-fit: cover;
   width: 40px;

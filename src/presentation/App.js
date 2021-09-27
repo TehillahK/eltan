@@ -13,7 +13,36 @@ function App() {
   const videoParentRef = useRef();
   const [musicPressed, setMusicPressed] = useState(false);
   const [videosPressed, setVideosPressed] = useState(false);
+  const [storyPressed,setStoryPressed]  = useState(false)
   const [reset, setReset] = useState(false);
+  const resetAll = () => {
+    if (videosPressed) {
+      setVideosPressed(false);
+    }
+    if(musicPressed){
+      setMusicPressed(false);
+    }
+    if(storyPressed){
+      setStoryPressed(false)
+    }
+  };
+  const showMusic = () => {
+    resetAll();
+    setMusicPressed(!musicPressed);
+  };
+  const showVideos = () => {
+    resetAll();
+    setVideosPressed(!videosPressed);
+  };
+  const showStory = () =>{
+    resetAll();
+    setStoryPressed(!storyPressed);
+  }
+  const clearScreen=()=>{
+    resetAll();
+   
+  }
+ 
   useEffect(() => {
     // Update the document title using the browser API
     //  document.title = `You clicked ${count} times`;
@@ -48,24 +77,7 @@ function App() {
       }
     }
   });
-  const showMusic = () => {
-    if (videosPressed) {
-      setVideosPressed(false);
-    }
-    setMusicPressed(!musicPressed);
-  };
-  const showVideos = () => {
-    if (musicPressed) {
-      setMusicPressed(false);
-    }
-    setVideosPressed(!videosPressed);
-  };
-  const resetAll = () => {
-    setReset(!reset);
-    if (reset) {
-      setMusicPressed(false);
-    }
-  };
+
   return (
     <div>
       <video
@@ -87,11 +99,12 @@ function App() {
       </video>
       <div className="content">
         <div className={"container"}>
-          <NavLinks showMusic={showMusic} showVideos={showVideos} />
+          <NavLinks showMusic={showMusic} showVideos={showVideos} showStory={showStory} />
           <Main
             reset={resetAll}
             showMusic={musicPressed}
             showVideos={videosPressed}
+            showStory={storyPressed}
           />
           <Socials />
         </div>
