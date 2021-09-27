@@ -86,7 +86,7 @@ header {
 }
 
 .main {
-  grid-template-columns: 15rem;
+  grid-template-columns: 18rem;
 }
 
 .auto-cols {
@@ -195,6 +195,13 @@ footer {
 .music-card button {
   margin-left: auto;
   margin-right: auto;
+}
+
+.video-card {
+  margin-right: 5rem;
+}
+.video-card .music-video {
+  width: 100px;
 }
 
 .text-box {

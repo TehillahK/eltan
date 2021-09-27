@@ -1,6 +1,7 @@
 
 const NavLinks = (props) => {
     const showMusic = props.showMusic;
+    const showVideos = props.showVideos;
     return (
         <div className={"side-bar"}>
             <ul>
@@ -11,7 +12,14 @@ const NavLinks = (props) => {
                     </button>
                 </li>
                 <li>
-                    <button className={"nav-link side-way-link"}>Videos</button>
+                    <button className={"nav-link side-way-link"}
+                        onClick={
+                            ()=>{
+                                showVideos();
+                            }
+                        }
+                    
+                    >Videos</button>
                 </li>
                 <li>
                     <button className={"nav-link side-way-link"}

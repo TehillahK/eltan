@@ -1,25 +1,24 @@
-import { useState,useEffect,useRef } from "react";
-import { isSafari,isMobileSafari } from "react-device-detect";
+import { useState, useEffect, useRef } from "react";
+import { isSafari, isMobileSafari } from "react-device-detect";
 import "./dist/css/main.css";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import Main from "./components/Main";
 import NavLinks from "./components/NavLinks";
 import Socials from "./components/Socials";
 import Footer from "./components/Footer";
 import background from "./assets/background.mp4";
-import BackgroundAlt from "./assets/background.webm"
-
-
+import BackgroundAlt from "./assets/background.webm";
 
 function App() {
   const videoParentRef = useRef();
-  const[musicPressed,setMusicPressed]=useState(false);
-  const [reset,setReset]=useState(false);
+  const [musicPressed, setMusicPressed] = useState(false);
+  const [videosPressed, setVideosPressed] = useState(false);
+  const [reset, setReset] = useState(false);
   useEffect(() => {
     // Update the document title using the browser API
-  //  document.title = `You clicked ${count} times`;
-    if((isMobileSafari || isSafari) && videoParentRef.current){
-      console.log("safari")
+    //  document.title = `You clicked ${count} times`;
+    if ((isMobileSafari || isSafari) && videoParentRef.current) {
+      console.log("safari");
       const player = videoParentRef.current;
       if (player) {
         // set the video attributes using javascript as per the
@@ -35,39 +34,65 @@ function App() {
           // let's play safe to ensure that if we do have a promise
           if (promise.then) {
             promise
-              .then(() => {console.log("success")})
+              .then(() => {
+                console.log("success");
+              })
               .catch(() => {
                 // if promise fails, hide the video and fallback to <img> tag
                 videoParentRef.current.style.display = "none";
-                console.log("failed")
-         //       setShouldUseImage(true);
+                console.log("failed");
+                //       setShouldUseImage(true);
               });
           }
         }, 0);
       }
     }
   });
-  const showMusic =()=>{
-    setMusicPressed(!musicPressed)
-  }
-  const resetAll=()=>{
-    setReset(!reset)
-    if(reset){
+  const showMusic = () => {
+    if (videosPressed) {
+      setVideosPressed(false);
+    }
+    setMusicPressed(!musicPressed);
+  };
+  const showVideos = () => {
+    if (musicPressed) {
       setMusicPressed(false);
     }
-  }
+    setVideosPressed(!videosPressed);
+  };
+  const resetAll = () => {
+    setReset(!reset);
+    if (reset) {
+      setMusicPressed(false);
+    }
+  };
   return (
     <div>
-      <video ref={videoParentRef} preload="metadata" playsInline  autoPlay  muted loop id="background-video" >
+      <video
+        ref={videoParentRef}
+        id="background-video"
+        preload="metadata"
+        playsInline
+        autoPlay
+        loop
+        muted
+      >
         <source src={background} type="video/mp4" />
-        <source src={BackgroundAlt} type="video/webm" onerror="fallback(parentNode)" />
-      Your browser does not support the video tag.
+        <source
+          src={BackgroundAlt}
+          type="video/webm"
+          onerror="fallback(parentNode)"
+        />
+        Your browser does not support the video tag.
       </video>
       <div className="content">
-       
         <div className={"container"}>
-          <NavLinks showMusic={showMusic} />
-          <Main reset={resetAll}  showMusic={musicPressed} />
+          <NavLinks showMusic={showMusic} showVideos={showVideos} />
+          <Main
+            reset={resetAll}
+            showMusic={musicPressed}
+            showVideos={videosPressed}
+          />
           <Socials />
         </div>
         <Footer />
