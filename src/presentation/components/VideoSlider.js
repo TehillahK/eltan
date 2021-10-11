@@ -5,7 +5,7 @@ function VideoCard(props) {
   const videoLink = "https://www.youtube.com/embed/uQTgfqUwRlY";
   return (
     <div className={"video-card"}>
-      <div className={"music-video"}>
+      <div className={"music-video "}>
         <iframe
           width="280"
           height="200"
@@ -28,6 +28,8 @@ function Videos() {
       loop={false}
       margin={50}
       items={1}
+      video={true}
+      videoHeight={true}
      // center={true}
       // options={options}
       nav

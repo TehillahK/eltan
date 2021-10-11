@@ -2,6 +2,8 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
+  "proxy": "https://us5.api.mailchimp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -41,6 +43,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
+    "@mailchimp/mailchimp_marketing": "^3.0.66",
     "node-sass": "^6.0.1",
     "react-device-detect": "^2.0.0"
   }

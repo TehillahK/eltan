@@ -14,6 +14,7 @@ padding-top: 15px;
 
 .two-rols{
     grid-template-rows: 8rem 30rem;
+
 }
 
 .main{
@@ -49,3 +50,17 @@ footer{
         grid-template-rows: 550px;
     }
   }
+  .responsive-iframe {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+   
+  }
+  .responsive-iframe iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

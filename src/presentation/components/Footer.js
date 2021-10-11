@@ -1,11 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify , faYoutube} from '@fortawesome/free-brands-svg-icons'
 import Logo from '../assets/logo.png'
+import { addEmail } from '../../business/AccessEmail';
 function Buttons(){
     return(
         <div className={"flex flex-row space-between buttons"}>
             <input className={"text-box"} />
-            <button className={"transparent-button"}>Join</button>
+            <button className={"transparent-button"} onClick={
+                ()=>{
+                    addEmail();
+                }
+            }>Join</button>
             <button className={"youtube-button"}>
                 <FontAwesomeIcon className="button-icon" icon={faYoutube} />
                 youtube
