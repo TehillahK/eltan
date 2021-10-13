@@ -13,7 +13,7 @@ function Buttons() {
     setEmail("")
   }
   return (
-    <div className={"flex flex-row space-between buttons"}>
+    <div className={"flex flex-row buttons"}>
       <form onSubmit={handleSubmit}>
         <input
           className={"text-box"}
