@@ -93,7 +93,7 @@ function App() {
         <source
           src={BackgroundAlt}
           type="video/webm"
-          onerror="fallback(parentNode)"
+          onError="fallback(parentNode)"
         />
         Your browser does not support the video tag.
       </video>

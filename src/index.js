@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './presentation/App';
-
+import './presentation/assets/fonts/62dragz/stylesheet.css'
+require('dotenv').config()
 ReactDOM.render(
   <React.StrictMode>
     <App />

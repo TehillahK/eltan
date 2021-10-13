@@ -8,6 +8,7 @@ body {
   padding: 0px;
   color: white;
   background-color: black;
+  font-family: "64dragz", sans-serif;
   min-height: 100vh;
 }
 
@@ -153,6 +154,7 @@ footer {
 }
 .side-bar .nav-link {
   display: block;
+  font: "64dragz";
   font-size: 1.5rem;
   padding: 8px 16px;
   color: white;

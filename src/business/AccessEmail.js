@@ -1,13 +1,21 @@
-//import Mailchimp from "mailchimp-api-v3";
-import Axios from 'axios'
-const mailchimp = require('@mailchimp/mailchimp_marketing');
-const API_KEY = "d78a0a4194d4b82496aa3ba2420251e9-us5";
-const AUDIENCE_ID = "fa85a67333";
-const URL="https://us5.api.mailchimp.com"
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs, doc, setDoc } from "firebase/firestore/lite";
+const firebaseConfig = {
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: "mbuwemi-site",
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-
-//const mailchimp = new Mailchimp(API_KEY);
-export function addEmail() {
-  console.log("enterd email") 
+export async function addEmail(userEmail) {
+  await setDoc(doc(db, "emails", userEmail), {
+    email: userEmail,
+    
+  });
 }
 
