@@ -8,7 +8,6 @@ body {
   padding: 0px;
   color: white;
   background-color: black;
-  font-family: "64dragz", sans-serif;
   min-height: 100vh;
 }
 
@@ -102,6 +101,9 @@ footer {
 }
 
 .footer {
+  font-family: sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px black;
   margin-top: 2rem;
   padding-top: 1rem;
   padding-left: 5rem;
@@ -154,14 +156,14 @@ footer {
 }
 .side-bar .nav-link {
   display: block;
-  font: "64dragz";
-  font-size: 1.5rem;
+  font-family: "62dragzregular";
+  font-size: 1.4rem;
   padding: 8px 16px;
   color: white;
   background-color: transparent;
   text-decoration: none;
   border: none;
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .side-bar .nav-link:hover {
@@ -173,13 +175,15 @@ footer {
 }
 
 .title {
+  font-family: "62dragzregular";
   background-color: transparent;
   color: white;
   letter-spacing: 2px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   border: none;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
 }
 
 .title:hover {
@@ -187,8 +191,9 @@ footer {
 }
 
 .copyright-line {
+  font-family: sans-serif;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-left: auto;
   margin-right: auto;
   max-width: fit-content;
@@ -231,8 +236,9 @@ footer {
 }
 
 .text-box {
-  color: white;
+  color: black;
   outline: none;
+  font-size: 1.2rem;
   background-color: transparent;
   border-left: none;
   border-right: none;
