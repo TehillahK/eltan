@@ -115,9 +115,10 @@ footer {
     grid-template-rows: 550px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .container {
     grid-template-rows: 550px;
+    grid-template-columns: 3rem auto 3.1rem;
   }
 }
 .responsive-iframe {
@@ -193,7 +194,7 @@ footer {
 .copyright-line {
   font-family: sans-serif;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   margin-left: auto;
   margin-right: auto;
   max-width: fit-content;
@@ -238,7 +239,6 @@ footer {
 .text-box {
   color: black;
   outline: none;
-  font-size: 1.2rem;
   background-color: transparent;
   border-left: none;
   border-right: none;

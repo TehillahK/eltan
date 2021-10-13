@@ -15,7 +15,6 @@ function Buttons() {
   return (
     <div className={"flex flex-row buttons"}>
       <form onSubmit={handleSubmit}>
-        <label>
           <input
             className={"text-box"}
             placeholder="Enter Email"
@@ -23,7 +22,6 @@ function Buttons() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </label>
         <input type="submit" className={"transparent-button"} />
       </form>
       <button className={"youtube-button"}>
