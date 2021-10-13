@@ -8,6 +8,7 @@ body {
   padding: 0px;
   color: white;
   background-color: black;
+  overflow-y: hidden;
   min-height: 100vh;
 }
 
@@ -112,12 +113,12 @@ footer {
 
 @media screen and (max-width: 750px) {
   .container {
-    grid-template-rows: 550px;
+    grid-template-rows: 500px;
   }
 }
 @media screen and (max-width: 900px) {
   .container {
-    grid-template-rows: 550px;
+    grid-template-rows: 400px;
     grid-template-columns: 3rem auto 3.1rem;
   }
 }
@@ -158,7 +159,7 @@ footer {
 .side-bar .nav-link {
   display: block;
   font-family: "62dragzregular";
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding: 8px 16px;
   color: white;
   background-color: transparent;
@@ -175,6 +176,15 @@ footer {
   transform: rotate(-90deg);
 }
 
+@media screen and (max-width: 750px) {
+  .side-bar {
+    height: 90vh;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+  }
+}
 .title {
   font-family: "62dragzregular";
   background-color: transparent;
@@ -197,7 +207,6 @@ footer {
   font-size: 0.6rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: fit-content;
 }
 
 .text-center {
@@ -275,7 +284,7 @@ footer {
 .youtube-button {
   margin-left: 1rem;
   color: white;
-  width: 80px;
+  width: 4rem;
   background-color: #FF0000;
   border: none;
 }
@@ -287,7 +296,7 @@ footer {
 .spotify-button {
   margin-left: 1rem;
   color: white;
-  width: 80px;
+  width: 4rem;
   background-color: #1DB954;
   border: none;
   border-radius: 1rem;
@@ -311,6 +320,11 @@ footer {
   color: #eb801d;
 }
 
+@media screen and (max-width: 900px) {
+  .youtube-button {
+    display: none;
+  }
+}
 .scroll-wrapper {
   display: inline-flex;
   width: 20rem;

@@ -19,7 +19,7 @@
     .nav-link{
         display: block;
         font-family: '62dragzregular';
-        font-size: 1.4rem;
+        font-size: 1rem;
         //font-size: rem;
         padding: 8px 16px;
         color: white;
@@ -36,4 +36,17 @@
 }
 .side-way-link{
     transform: rotate(-90deg);
+}
+@media screen and (max-width: 750px) {
+    .side-bar{
+      
+        height: 90vh; 
+       
+    }
+    .nav-link{
+        
+        padding: 8px 10px;
+      
+      //  transform: rotate(90deg);
+    }
 }

@@ -1,5 +1,5 @@
 @use 'colors';
-$button-length:80px;
+$button-length:4rem;
 $text-color:white;
 .button-icon{
     margin-right: 0.3rem;
@@ -59,3 +59,8 @@ $text-color:white;
     border-color:rgb(235, 128, 29); 
     color: rgb(235, 128, 29);
 }
+@media screen and (max-width: 900px) {
+    .youtube-button{
+       display: none;
+    }
+  }

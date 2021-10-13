@@ -45,13 +45,13 @@ footer{
 }
 @media screen and (max-width: 750px) {
     .container{
-        grid-template-rows: 550px;
+        grid-template-rows: 500px;
     }
   }
 
 @media screen and (max-width: 900px) {
     .container{
-        grid-template-rows: 550px;
+        grid-template-rows: 400px;
         grid-template-columns: 3rem auto 3.1rem;
 
     }

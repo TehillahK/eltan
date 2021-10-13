@@ -14,7 +14,7 @@ function Buttons() {
   }
   return (
     <div className={"flex flex-row buttons"}>
-      <form onSubmit={handleSubmit}>
+      <form  className={"flex flex-row "}  onSubmit={handleSubmit}>
           <input
             className={"text-box"}
             placeholder="Enter Email"
