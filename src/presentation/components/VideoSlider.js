@@ -25,8 +25,8 @@ function VideoCard(props) {
 function Videos() {
   const musicVideos=getVideos();
   const videoList = musicVideos.map((musicVideo)=>
-    <div class="item">
-        <VideoCard key={musicVideo.id}  videoLink={musicVideo.link} />
+    <div key={musicVideo.id}  class="item">
+        <VideoCard  videoLink={musicVideo.link} />
       </div>
   )
   return (

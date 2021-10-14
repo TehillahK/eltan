@@ -234,6 +234,12 @@ footer {
   margin-left: 20px;
   margin-right: 10px;
 }
+.music-card .album-title {
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-shadow: 2px 2px black;
+  line-height: 2;
+}
 .music-card button {
   margin-left: auto;
   margin-right: auto;

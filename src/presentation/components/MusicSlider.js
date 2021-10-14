@@ -3,24 +3,28 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import AlbumCover from "../assets/album_covers/got_you.jpg";
+import {getSongs} from "../../business/AccessMusic"
 
 function openLink(link) {
   window.open(link);
 }
 function MusicAlbum(props) {
+  const albumCover=props.albumCover;
+  const albumTitle=props.title;
+  const link=props.link;
   return (
     <div className={"music-card "}>
       <img
         className={"album-cover"}
-        src={AlbumCover}
-        alt={"got you cover art"}
+        src={albumCover}
+        alt={`${albumTitle} cover art`}
       />
-      <h3 style={{ textAlign: "center" }}>Album title</h3>
+      <h3 className={"album-title"} style={{ textAlign: "center" }}>{albumTitle}</h3>
       <button
         className={"download-music"}
         style={{ marginLeft: "auto", marginRight: "auto" }}
         onClick={() => {
-          openLink("");
+          openLink(link);
         }}
       >
         GET IT NOW
@@ -29,6 +33,12 @@ function MusicAlbum(props) {
   );
 }
 function MusicAlbums(props) {
+
+  const songs = getSongs().map((song)=>
+    <div key={song.id} class="item">
+        <MusicAlbum albumCover={song.coverArt} title={song.title} link={song.link} />
+    </div>
+  )
   const options = {
     items: 1,
   };
@@ -43,15 +53,7 @@ function MusicAlbums(props) {
       // options={options}
       nav
     >
-      <div class="item">
-        <MusicAlbum />
-      </div>
-      <div class="item">
-        <MusicAlbum />
-      </div>
-      <div class="item">
-        <MusicAlbum />
-      </div>
+      {songs}
     </OwlCarousel>
   );
 }
