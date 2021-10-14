@@ -8,13 +8,13 @@ import Socials from "./components/Socials";
 import Footer from "./components/Footer";
 import background from "./assets/background.mp4";
 import BackgroundAlt from "./assets/background.webm";
-
+import Poster from "./assets/background.jpg"
 function App() {
   const videoParentRef = useRef();
   const [musicPressed, setMusicPressed] = useState(false);
   const [videosPressed, setVideosPressed] = useState(false);
   const [storyPressed,setStoryPressed]  = useState(false)
-  const [reset, setReset] = useState(false);
+ 
   const resetAll = () => {
     if (videosPressed) {
       setVideosPressed(false);
@@ -37,10 +37,6 @@ function App() {
   const showStory = () =>{
     resetAll();
     setStoryPressed(!storyPressed);
-  }
-  const clearScreen=()=>{
-    resetAll();
-   
   }
  
   useEffect(() => {
@@ -83,6 +79,7 @@ function App() {
       <video
         ref={videoParentRef}
         id="background-video"
+        poster={Poster}
         preload="metadata"
         playsInline
         autoPlay
@@ -93,7 +90,7 @@ function App() {
         <source
           src={BackgroundAlt}
           type="video/webm"
-          onError="fallback(parentNode)"
+          
         />
         Your browser does not support the video tag.
       </video>
