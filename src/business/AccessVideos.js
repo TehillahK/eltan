@@ -2,7 +2,19 @@ export function getVideos(){
     return[
         {
             id:1,
-            link:''
+            link:'https://www.youtube.com/embed/yEkGRodpqMs'
+        },
+        {
+            id:2,
+            link:'https://www.youtube.com/embed/uQTgfqUwRlY'
+        },
+        {
+            id:3,
+            link:'https://www.youtube.com/embed/ytTse40aljU'
+        },
+        {
+            id:4,
+            link:'https://www.youtube.com/embed/AnVYTEOJusQ'
         }
     ]
 }

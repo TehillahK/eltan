@@ -1,8 +1,9 @@
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { getVideos } from "../../business/AccessVideos";
 function VideoCard(props) {
-  const videoLink = "https://www.youtube.com/embed/uQTgfqUwRlY";
+  const videoLink = props.videoLink;
   return (
     <div className={"video-card"}>
       <div className={"music-video "}>
@@ -22,6 +23,12 @@ function VideoCard(props) {
 }
 
 function Videos() {
+  const musicVideos=getVideos();
+  const videoList = musicVideos.map((musicVideo)=>
+    <div class="item">
+        <VideoCard key={musicVideo.id}  videoLink={musicVideo.link} />
+      </div>
+  )
   return (
     <OwlCarousel
       className="owl-theme"
@@ -34,15 +41,7 @@ function Videos() {
       // options={options}
       nav
     >
-      <div class="item">
-        <VideoCard />
-      </div>
-      <div class="item">
-        <VideoCard />
-      </div>
-      <div class="item">
-        <VideoCard />
-      </div>
+      {videoList}
     </OwlCarousel>
   );
 }
