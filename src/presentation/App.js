@@ -1,13 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { isSafari, isMobileSafari } from "react-device-detect";
 import "./dist/css/main.css";
-import Header from "./components/Header";
 import Main from "./components/Main";
 import NavLinks from "./components/NavLinks";
 import Socials from "./components/Socials";
 import Footer from "./components/Footer";
-import background from "./assets/background.mp4";
-import BackgroundAlt from "./assets/background.webm";
 import Poster from "./assets/background.jpg"
 function App() {
   const videoParentRef = useRef();
@@ -86,9 +83,9 @@ function App() {
         loop
         muted
       >
-        <source src={background} type="video/mp4" />
+        <source src={'https://firebasestorage.googleapis.com/v0/b/mbuwemi-site.appspot.com/o/background.mp4?alt=media&token=82333ea5-0ea9-45da-b8b1-7aacdb6305d8'} type="video/mp4" />
         <source
-          src={BackgroundAlt}
+          src={'https://firebasestorage.googleapis.com/v0/b/mbuwemi-site.appspot.com/o/background.webm?alt=media&token=c023352f-233f-49f0-9e18-05c154371cc1'}
           type="video/webm"
           
         />
