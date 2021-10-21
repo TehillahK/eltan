@@ -1,5 +1,5 @@
 @use 'colors';
-$button-length:4rem;
+$button-length:4.3rem;
 $text-color:white;
 .button-icon{
     margin-right: 0.3rem;
@@ -25,6 +25,9 @@ $text-color:white;
     color: black;
 }
 .youtube-button{
+    display: flex;
+    padding-top: 0.4rem;
+    padding-right: 0.4rem;
     margin-left: 1rem;
     color: $text-color;
     width: $button-length;

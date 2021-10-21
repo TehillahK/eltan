@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { isSafari, isMobileSafari } from "react-device-detect";
 import "./dist/css/main.css";
+
 import Main from "./components/Main";
 import NavLinks from "./components/NavLinks";
 import Socials from "./components/Socials";
 import Footer from "./components/Footer";
 import Poster from "./assets/background.jpg"
+import VideoBackground from "./components/VideoBackground";
 function App() {
   const videoParentRef = useRef();
   const [musicPressed, setMusicPressed] = useState(false);
@@ -73,24 +75,7 @@ function App() {
 
   return (
     <div>
-      <video
-        ref={videoParentRef}
-        id="background-video"
-        poster={Poster}
-        preload="metadata"
-        playsInline
-        autoPlay
-        loop
-        muted
-      >
-        <source src={'https://firebasestorage.googleapis.com/v0/b/mbuwemi-site.appspot.com/o/background.mp4?alt=media&token=82333ea5-0ea9-45da-b8b1-7aacdb6305d8'} type="video/mp4" />
-        <source
-          src={'https://firebasestorage.googleapis.com/v0/b/mbuwemi-site.appspot.com/o/background.webm?alt=media&token=c023352f-233f-49f0-9e18-05c154371cc1'}
-          type="video/webm"
-          
-        />
-        Your browser does not support the video tag.
-      </video>
+      <VideoBackground />
       <div className="content">
         <div className={"container"}>
           <NavLinks showMusic={showMusic} showVideos={showVideos} showStory={showStory} />

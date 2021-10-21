@@ -26,7 +26,7 @@ function Buttons() {
       </form>
       <button className={"youtube-button"}>
         <FontAwesomeIcon className="button-icon" icon={faYoutube} />
-        youtube
+        Youtube
       </button>
     </div>
   );
