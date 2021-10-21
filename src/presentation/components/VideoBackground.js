@@ -1,5 +1,6 @@
 import Poster from "../assets/background.jpg";
 import MobileVideo from "../assets/background-mobile.mp4"
+import MobilePoster from "../assets/mobile-poster.jpg"
 import { useMediaQuery } from 'react-responsive'
 function Desktop(){
     return(
@@ -27,6 +28,7 @@ function Mobile(){
     return(
         <video
         id="background-video"
+        poster={MobilePoster}
         preload="metadata"
         playsInline
         autoPlay
