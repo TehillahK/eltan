@@ -1,6 +1,7 @@
 import Poster from "../assets/background.jpg";
 import MobileVideo from "../assets/background-mobile.mp4"
 import MobilePoster from "../assets/mobile-poster.jpg"
+import MobileVideoAlt from "../assets/background-mobile.webm"
 import { useMediaQuery } from 'react-responsive'
 function Desktop(){
     return(
@@ -36,7 +37,7 @@ function Mobile(){
         muted
       >
         <source src={MobileVideo} type="video/mp4" />
-       
+        <source src={MobileVideoAlt} type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
